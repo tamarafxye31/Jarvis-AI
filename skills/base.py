@@ -1,7 +1,12 @@
-class Skill:
+from abc import ABC, abstractmethod
 
-    def can_handle(self, prompt: str) -> bool:
-        return False
 
+class BaseSkill(ABC):
+
+    @abstractmethod
+    def can_handle(self, prompt: str):
+        pass
+
+    @abstractmethod
     def execute(self, prompt: str):
-        return None
+        pass

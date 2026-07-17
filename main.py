@@ -1,4 +1,4 @@
-from core.assistant import Assistant
+from assistant.assistant import Assistant
 
 
 def main():
