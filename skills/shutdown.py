@@ -18,11 +18,7 @@ class ShutdownSkill(BaseSkill):
 
     def execute(self, prompt: str):
 
-        confirmation = input(
-            "Are you sure you want to shut down the computer? (y/n): "
-        ).strip().lower()
-
-        if confirmation != "y":
+        if not self.confirm("Are you sure you want to shut down the computer?"):
             return "Shutdown cancelled."
 
         subprocess.run(
