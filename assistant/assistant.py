@@ -5,6 +5,7 @@ from engine.router import Router
 from skills.open_app import OpenAppSkill
 from skills.shutdown import ShutdownSkill
 from skills.restart import RestartSkill
+from skills.sleep import SleepSkill
 
 
 class Assistant:
@@ -18,6 +19,7 @@ class Assistant:
         self.router.register(OpenAppSkill())
         self.router.register(ShutdownSkill())
         self.router.register(RestartSkill())
+        self.router.register(SleepSkill())
 
         self.memory.add(
             "system",
