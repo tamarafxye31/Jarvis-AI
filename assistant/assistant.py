@@ -7,6 +7,7 @@ from skills.shutdown import ShutdownSkill
 from skills.restart import RestartSkill
 from skills.sleep import SleepSkill
 from skills.hibernate import HibernateSkill
+from skills.lock import LockSkill
 
 
 class Assistant:
@@ -22,6 +23,7 @@ class Assistant:
         self.router.register(RestartSkill())
         self.router.register(SleepSkill())
         self.router.register(HibernateSkill())
+        self.router.register(LockSkill())
 
         self.memory.add(
             "system",
